@@ -1,7 +1,7 @@
 {
   "hosting": {
     "firebase": "fir-project-37ac7"
-    "public": "firebase/public",
+    "public": "./firebase/public",
     "ignore": [
       "firebase.json",
       "**/.*",
