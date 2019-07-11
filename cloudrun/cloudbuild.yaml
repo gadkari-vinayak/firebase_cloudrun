@@ -7,6 +7,6 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/hotfix-b']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'hotfix-b', '--image', 'gcr.io/$PROJECT_ID/python-test', '--region', 'us-central1','--platform', 'managed']
+  args: ['beta', 'run', 'deploy', 'hotfix-b', '--image', 'gcr.io/$PROJECT_ID/hotfix-a', '--region', 'us-central1','--platform', 'managed']
 images:
 - gcr.io/$PROJECT_ID/hotfix-b
