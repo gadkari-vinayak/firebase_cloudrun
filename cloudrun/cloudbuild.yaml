@@ -1,12 +1,12 @@
 steps:
   # build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/hotfix-b', './cloudrun']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/$BRANCH_NAME', './cloudrun']
   # push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/hotfix-b']
+  args: ['push', 'gcr.io/$PROJECT_ID/$BRANCH_NAME']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'hotfix-b', '--image', 'gcr.io/$PROJECT_ID/hotfix-b', '--region', 'us-central1','--platform', 'managed']
+  args: ['beta', 'run', 'deploy', '$BRANCH_NAME', '--image', 'gcr.io/$PROJECT_ID/$BRANCH_NAME', '--region', 'us-central1','--platform', 'managed']
 images:
-- gcr.io/$PROJECT_ID/hotfix-b
+- gcr.io/$PROJECT_ID/$BRANCH_NAME
