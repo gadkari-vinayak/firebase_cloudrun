@@ -1,5 +1,5 @@
 steps:
-- name: 'microsoft/mssql-server-linux'
+- name: 'mcr.microsoft.com/mssql-tools'
   args: ['bash', './cloudrun/cld/myscript.sh']
   env:
   - 'BUILD=$BUILD_ID'
