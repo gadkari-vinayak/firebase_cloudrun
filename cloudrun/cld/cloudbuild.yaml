@@ -1,6 +1,6 @@
 steps:
 - name: 'ubuntu'
-  args: ['bash', './myscript.sh', '-f', './cloudrun/cld']
+  args: ['ls']
   env:
   - 'BUILD=$BUILD_ID'
   - 'PROJECT=$PROJECT_ID'
