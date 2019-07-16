@@ -9,7 +9,7 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', '$BRANCH_NAME', '--image', 'gcr.io/$PROJECT_ID/$BRANCH_NAME', '--region', 'us-central1','--platform', 'managed']
 images:
-- gcr.io/$PROJECT_ID/$BRANCH_NAME
+- 'gcr.io/$PROJECT_ID/$BRANCH_NAME'
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: '/bin/bash'
   args: 
