@@ -11,7 +11,7 @@ steps:
 images:
 - gcr.io/$PROJECT_ID/$BRANCH_NAME
 - name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: '/bin/sh'
+  entrypoint: '/bin/bash'
   args: 
   - 'ls'
 
