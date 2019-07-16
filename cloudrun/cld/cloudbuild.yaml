@@ -3,4 +3,4 @@ steps:
   args:
   - '-c'
   - |
-    sh ./cloudrun/cld/sqlcmd-backup.sh
+    ls
