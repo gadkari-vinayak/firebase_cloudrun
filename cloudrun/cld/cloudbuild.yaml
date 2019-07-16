@@ -1,4 +1,4 @@
 steps:
 - name: 'ubuntu'
   args:
-  - 'apt-get install mssql-tool -y'
+  - 'sudo apt-get install mssql-tool -y'
