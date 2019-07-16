@@ -1,4 +1,7 @@
 steps:
 - name: 'ubuntu'
-  args:
-  - 'sudo apt-get install libunwind8 -y'
+  args: ['bash', './myscript.sh']
+  env:
+  - 'BUILD=$BUILD_ID'
+  - 'PROJECT=$PROJECT_ID'
+  - 'REV=$REVISION_ID'
