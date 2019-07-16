@@ -1,17 +1,9 @@
-FROM ubuntu:latest
+FROM ubuntu:15.04
 
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-
-RUN curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-
-RUN apt-get update
-
-RUN apt-get install mssql-tools unixodbc-dev -y
-
-RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-
-RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-
-RUN source ~/.bashrc
-
-#ENTRYPOINT /bin/bash
+RUN apt-get update && \
+    apt-get upgrade && \
+    sudo et install -y curl && \
+    sudo https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && \
+   sudo apt-get update && \
+   sudo apt-get install -y mssql-server 
