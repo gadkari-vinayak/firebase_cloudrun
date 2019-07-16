@@ -1,3 +1,6 @@
 steps:
 - name: 'mcr.microsoft.com/mssql-tools'
-  args: ['sh', './cloudrun/cld/sqlcmd-backup.sh'] 
+  entrypoint: /bin/sh
+  args:
+  - './cloudrun/cld/sqlcmd-backup.sh'
+
