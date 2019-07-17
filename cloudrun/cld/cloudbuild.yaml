@@ -3,6 +3,5 @@ steps:
   args:
   - '-c'
   - |
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-
+    apt-get install mssql-tools unixodbc-dev -y
    
