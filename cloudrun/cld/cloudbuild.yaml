@@ -3,4 +3,6 @@ steps:
   args:
   - '-c'
   - |
-    ls
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+   
