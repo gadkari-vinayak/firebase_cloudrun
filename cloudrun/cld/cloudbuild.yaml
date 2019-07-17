@@ -1,5 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: '/bin/bash'
   args: ['bash', './cloudrun/cld/sqlcmd-backup.sh']
    
