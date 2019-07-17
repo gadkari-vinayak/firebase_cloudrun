@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - '-c'
-  - |
-    apt-get install mssql-tools unixodbc-dev -y
+  - '|'
+    'apt-get install mssql-tools unixodbc-dev -y'
    
