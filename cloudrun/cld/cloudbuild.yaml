@@ -2,7 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/curl'
   args: ['https://packages.microsoft.com/keys/microsoft.asc']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['|', 'sudo', 'apt-key', 'add', '-']
+  args: 
+  - '-c'
+  - |
+    | sudo apt-key add -
 
 
    
