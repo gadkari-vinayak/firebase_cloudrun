@@ -1,4 +1,5 @@
 steps:
 - name: 'mcr.microsoft.com/mssql-tools'
+  entrypoint: '/bin/sh'
   args:	['pwd']
    
