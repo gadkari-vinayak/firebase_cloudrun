@@ -2,8 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/curl'
   args: ['https://packages.microsoft.com/keys/microsoft.asc']
 - name: 'gcr.io/cloud-builders/gcloud'
-  ENTRYPOINT: '/bin/bash'
-  args: ['|', 'sudo', 'apt-jey', 'add', '-']
+  args: ['|', 'sudo', 'apt-key', 'add', '-']
 
 
    
