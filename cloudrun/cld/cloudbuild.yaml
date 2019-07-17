@@ -1,5 +1,5 @@
 steps:
-- name: 'mcr.microsoft.com/mssql-tools'
+- name: 'gcr.io/cloud-builders/gcloud'
   args:
   - '-c'
   - |
