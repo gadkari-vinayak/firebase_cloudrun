@@ -1,13 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/curl'
-  args: ['https://packages.microsoft.com/keys/microsoft.asc']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: 
-  - '-c'
-  - |
-    | sudo apt-key add -
-
-
+- name: Add Docker's official GPG key
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
    
     
    
