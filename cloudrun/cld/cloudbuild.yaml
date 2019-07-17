@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/curl'
-  args: ['https://packages.microsoft.com/config/ubuntu/16.04/prod.list', '|', 'sudo', 'tee', '/etc/apt/sources.list.d/msprod.list']
+  args: ['https://packages.microsoft.com/config/ubuntu/16.04/prod.list']
 
 
 
