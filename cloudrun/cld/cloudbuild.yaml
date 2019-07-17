@@ -1,8 +1,7 @@
 steps:
-- name: Add Docker's official GPG key
-  apt_key:
-    url: https://packages.microsoft.com/keys/microsoft.asc
-    state: present
-   
-    
+- name: 'mcr.microsoft.com/mssql-tools'
+  args:
+  - '-c'
+  - |
+    sqlcmd --help
    
