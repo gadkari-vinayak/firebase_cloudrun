@@ -1,4 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'mcr.microsoft.com/mssql-tools'
   args: ['bash', './cloudrun/cld/test.sh']
    
