@@ -1,1 +1,4 @@
-sqlcmd
+#!/bin/bash
+ls
+pwd
+lsblk
