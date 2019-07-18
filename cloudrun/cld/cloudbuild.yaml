@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
-  args: ['bash', 'echo', '$PATH']
+  args: ['echo', '$PATH']
 
