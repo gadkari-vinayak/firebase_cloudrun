@@ -1,4 +1,5 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
-  args: ['bash', '/opt/mssql-tools/bin/sqlcmd']
+  entrypoint: '/opt/mssql-tools/bin/sqlcmd'
+  args: ['bash', './cloudrun/cld/test.sh']
 
