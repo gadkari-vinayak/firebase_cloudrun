@@ -1,2 +1,2 @@
 #!/bin/bash
-sqlcmd
+echo $PATH
