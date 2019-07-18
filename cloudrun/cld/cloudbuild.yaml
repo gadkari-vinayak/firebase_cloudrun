@@ -1,4 +1,13 @@
 steps:
-- name: 'mcr.microsoft.com/mssql/server:2017-latest'
+  # build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/mssql', './cloudrun/cld']
+  # push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/mssql']
+  # Deploy container image to Cloud Run
+- name: 'gcr.io/$PROJECT_ID/mssql'
   args: ['bash', './cloudrun/cld/test.sh']
-   
+images:
+- gcr.io/$PROJECT_ID/mssql
+
