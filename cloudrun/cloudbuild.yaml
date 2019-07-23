@@ -1,12 +1,7 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
   env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin']
-  args:
-  - '-c'
-  - |
-    sleep 300
-
-
+  args: ['bash', './cloudrun/sqlcmd-backup.sh']
 - name: 'gcr.io/$PROJECT_ID/mssql'
   env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin']
   args: ['bash', './cloudrun/sqlcmd-restore.sh']
