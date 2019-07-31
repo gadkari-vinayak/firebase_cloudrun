@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
   env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin']
-  args: ['-c', 'sqlcmd -S 34.93.207.87 -U testuser -P testuser -Q "BACKUP DATABASE database1 TO DISK ='D:\backup\database1.bak' WITH CHECKSUM, NOINIT, SKIP, NOREWIND, NOUNLOAD, STATS = 10"'
+  args: ['bash', 'sqlcmd-backup.sh']
 - name: 'gcr.io/$PROJECT_ID/mssql'
   env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin', 'h1db=$BRANCH_NAME']
   args: ['bash', './cloudrun/sqlcmd-restore.sh']
