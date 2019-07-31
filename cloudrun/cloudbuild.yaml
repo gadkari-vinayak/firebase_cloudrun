@@ -5,6 +5,8 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
   env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin']
   args: ['bash', './cloudrun/sqlcmd-restore.sh']
+  env:
+  - 'h1db=$BRANCH_NAME'
   # build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/$BRANCH_NAME', './cloudrun']
