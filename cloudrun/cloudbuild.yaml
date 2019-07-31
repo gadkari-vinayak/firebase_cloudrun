@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/mssql'
-  env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin', 'db=$BRANCH_NAME']
+  env: ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin', '$BRANCH_NAME']
   args: ['echo', '$db']
 
